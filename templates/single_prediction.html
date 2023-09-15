@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .report-box {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #007BFF;
+            cursor: pointer;
+            transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+        }
+
+        h1:hover {
+            color: #FF5733;
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-box">
+        <h1 id="report-heading">REPORT : {{result}}</h1>
+    </div>
+
+    <script>
+        // Get a reference to the h1 element
+        var h1 = document.getElementById("report-heading");
+
+        // Add a click event listener to the h1 element to toggle animations
+        h1.addEventListener("click", function () {
+            // Toggle font size and color
+            if (h1.style.color === "rgb(255, 87, 51)") {
+                h1.style.color = "#007BFF";
+                h1.style.fontSize = "36px";
+            } else {
+                h1.style.color = "#FF5733";
+                h1.style.fontSize = "42px";
+            }
+        });
+    </script>
+</body>
+</html>
